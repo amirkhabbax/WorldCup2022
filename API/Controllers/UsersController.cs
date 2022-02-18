@@ -24,7 +24,7 @@ namespace API.Controllers
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsersAsync()
         {
             if(_context.Users == null){
-                return NotFound();
+                return BadRequest();
             }
             return await _context.Users.ToListAsync();
         }
@@ -34,7 +34,7 @@ namespace API.Controllers
         public async Task<ActionResult<AppUser?>> GetUser(int id)
         {
             if(_context.Users == null){
-                return NotFound();
+                return BadRequest();
             }
             return await _context.Users.FindAsync(id);
         }
