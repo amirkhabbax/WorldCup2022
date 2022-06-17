@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   registerMode= false;
+
   
   constructor() { }
 
@@ -16,6 +18,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+  }
+
+  cancelRegisterMode(event:boolean){
+    this.registerMode = event;
   }
 
 }
