@@ -9,7 +9,7 @@ import { AccountService } from './_services/account.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'جام جهانی قطر- 2022';
+  title = 'جام جهانی 2022 - قطر';
   users: any;
 
   constructor(private accountService: AccountService) {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../_models/user';
 import { AccountService } from '../_services/account.service';
 
@@ -8,7 +8,7 @@ import { AccountService } from '../_services/account.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
+  @Input() titleFromApp:any;
   model: any = { };
   user: User | undefined;
   
